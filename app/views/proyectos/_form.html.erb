@@ -1,0 +1,30 @@
+<%= form_with(model: @proyecto, local: true) do |form| %>
+ <form class="row g-3">
+ <div class=container>
+    <h2>Nuevo Proyecto</h2>
+   <div>
+       <%=form.label :name, 'Nombre' %>
+       <%=form.text_field :name %>
+   <div>
+   <div>
+       <%=form.label :description, 'Descripción' %>
+       <%=form.text_area :description %>
+   <div>
+   <div>
+       <%=form.label :starting_date, 'Fecha de inicio' %>
+       <%=form.date_select :starting_date %>
+   <div>
+   <div>
+       <%=form.label :end_date, 'Fecha de termino' %>
+       <%=form.date_select :ending_date %>
+   <div>
+   <div>
+       <%=form.label :state, 'Estado' %>
+       <%=form.select :state, ['Propuesta', 'En proceso', 'Terminado'] %>
+   <div>
+   <div class='actions'>
+          <%= form.submit  %>
+   </div>
+ </div>
+ </form>
+<%end%>
